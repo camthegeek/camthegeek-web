@@ -1,0 +1,9 @@
+{ 
+    "api": {
+        "url": "192.168.1.2",
+        "port": "21813"
+    },
+    "tinycloud": {
+        "key": "kaz8vw2ze046k4nk708uqjesb3zhgy852wzjhgw48djwe4au"
+    }
+}

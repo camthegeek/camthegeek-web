@@ -1,0 +1,18 @@
+{
+    "sql": {
+        "ip": "127.0.0.1",
+        "port": "5432",
+        "user": "",
+        "pass": "",
+        "database": ""
+    },
+    "api": {
+        "port": "21813"
+    },
+    "admin": {
+        "email": "",
+        "username": "",
+        "password": ""
+    }
+
+}

@@ -1,0 +1,129 @@
+#header {
+  padding: 0;
+}
+
+#sidebar-wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidewrapper {
+  position: relative;
+  left: 250px;
+  z-index: 1000;
+  overflow-y: auto;
+  margin-left: -250px;
+  width: 0;
+  height: 100%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar-wrapper.toggled #sidewrapper {
+  width: 250px;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  color: #999999;
+  text-decoration: none;
+}
+
+.sidebar-nav li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  background: none;
+  color: #fff;
+}
+
+.img-mini {
+  height: 64px !important;
+}
+
+.featured_img_small {
+  max-height: 150px;
+  object-fit: cover;
+}
+
+.featured_img_med {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.featured_img_large {
+  max-height: 600px;
+  object-fit: cover;
+}
+
+body {
+  background-color: #8fc7c6 !important;
+}
+
+.overlay-dark {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav h1 {
+  display: inline-block;
+  padding: .5rem;
+}
+
+.blogs .card-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badge-view-project {
+  color: #fff;
+  background-color: #4e8483;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: rgb(211, 211, 211);
+  text-decoration: none;;
+}
