@@ -4,8 +4,8 @@ import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import config from '../config.json';
 import Loading from './loading';
-import parse from 'html-react-parser'; // TO BE USED ON INDIVIDUAL BLOG POST PAGE
-import BlogPosts from './blog_posts';
+import parse from 'html-react-parser';
+// import BlogPosts from './blog_posts'; // to be replaced with project list at bottom of pages
 
 class SingleProject extends Component {
     constructor(props) {
