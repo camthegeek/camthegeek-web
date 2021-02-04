@@ -6,7 +6,6 @@ class Loading extends Component {
     <div className="row">
         <div className="col-12">
             <h1>Loading . . .</h1>
-            <img alt="loading cat" src="/images/nyancat.gif"/>
         </div>
     </div>
     )
