@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col, Card } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import config from '../config.json';
 import Loading from './loading';
@@ -36,28 +37,31 @@ class SingleProject extends Component {
             return (
                 <>
                     {!this.state.project &&
-                        <Redirect to="/404"/>
+                        <Redirect to="/404" />
                     }
                     {this.state.project &&
                         <>
+                            <Helmet>
+                                <meta charSet="utf-8" />
+                                <title>camthegeek - {this.state.project.title}</title>
+                                <meta name="description" content="camthegeek.net" />
+                            </Helmet>
                             <Row className="mb-2 mt-2">
                                 <Col md={12}>
                                     <Card className="border-0">
-                                        
-                                            <Card.Body>
-                                                <h2>{this.state.project.title}</h2>
-                                                <Card.Img variant="top" src={`/images/${this.state.project.featured_img}`} />
-                                                <Card.Text>
+                                        <Card.Body>
+                                            <h2>{this.state.project.title}</h2>
+                                            <Card.Img variant="top" src={`/images/${this.state.project.featured_img}`} />
+                                            <Card.Text>
                                                 {this.state.project.body ? parse(this.state.project.body) : ''}
                                             </Card.Text>
-                                            </Card.Body>
-
+                                        </Card.Body>
                                     </Card>
                                 </Col>
                             </Row>
                             <Row className="mb-2 mt-2">
                                 <Col md={12}>
-                                    
+
                                 </Col>
                             </Row>
                         </>

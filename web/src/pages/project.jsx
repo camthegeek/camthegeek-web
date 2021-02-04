@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Helmet } from 'react-helmet';
 import SingleProject from '../components/project_single';
 
 class Project extends Component {
@@ -8,15 +7,8 @@ class Project extends Component {
     }
     render() {
         return(
-            <section className="container">
-                <Helmet>
-                    <meta charSet="utf-8" />
-                    <title>camthegeek - About</title>
-                    <meta name="description" content="camthegeek.net" />
-                </Helmet>
-         
-            <SingleProject project_id={this.state.project_id}/>
-
+            <section className="container">        
+                <SingleProject project_id={this.state.project_id}/>
            </section>
         )
     }
