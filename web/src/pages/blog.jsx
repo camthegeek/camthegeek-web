@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Helmet } from 'react-helmet';
 import SinglePost from '../components/blog_single';
 
 class Blog extends Component {
@@ -8,13 +7,7 @@ class Blog extends Component {
     }
     render() {
         return(
-            <section className="container">
-                <Helmet>
-                    <meta charSet="utf-8" />
-                    <title>camthegeek - About</title>
-                    <meta name="description" content="camthegeek.net" />
-                </Helmet>
-         
+            <section className="container">       
             <SinglePost blog_id={this.state.blog_id}/>
 
            </section>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col, Card } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import config from '../config.json';
 import Loading from './loading';
@@ -37,18 +38,23 @@ class SinglePost extends Component {
             return (
                 <>
                     {!this.state.post &&
-                        <Redirect to="/404"/>
+                        <Redirect to="/404" />
                     }
                     {this.state.post &&
                         <>
+                            <Helmet>
+                                <meta charSet="utf-8" />
+                                <title>camthegeek - {this.state.post.title}</title>
+                                <meta name="description" content="camthegeek.net" />
+                            </Helmet>
                             <Row className="mb-2 mt-2">
                                 <Col md={12}>
                                     <Card className="text-white border-0">
                                         <Card.Img className="featured_img_large" variant="top" src={`/images/${this.state.post.featured_img}`} />
                                         <Card.ImgOverlay className="overlay-dark d-flex flex-column">
                                             <Card.Body>
-                                                        <h2>{this.state.post.title}</h2>
-                                                        <h6>Written: {new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(`${this.state.post.timestamp}`)}</h6>
+                                                <h2>{this.state.post.title}</h2>
+                                                <h6>Written: {new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(`${this.state.post.timestamp}`)}</h6>
                                             </Card.Body>
                                         </Card.ImgOverlay>
                                     </Card>
@@ -63,7 +69,7 @@ class SinglePost extends Component {
                             </Row>
                             <Row className="mb-2 mt-2">
                                 <Col md={12}>
-                                    <BlogPosts title="Latest posts"/>
+                                    <BlogPosts title="Latest posts" />
                                 </Col>
                             </Row>
                         </>
